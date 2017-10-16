@@ -12,16 +12,6 @@ const topic = (
         count: action.count,
         text: action.text
       };
-    case types.INCREMENT_COUNT:
-      if (state.id === action.id) {
-        return { ...state, count: state.count + 1 };
-      }
-      return state;
-    case types.DECREMENT_COUNT:
-      if (state.id === action.id) {
-        return { ...state, count: state.count - 1 };
-      }
-      return state;
     default:
       return state;
   }
@@ -39,11 +29,6 @@ const topics = (
       return [...state, topic(undefined, action)];
     case types.CREATE_TOPIC_FAILURE:
       return state.filter(t => t.id !== action.id);
-    case types.DESTROY_TOPIC:
-      return state.filter(t => t.id !== action.id);
-    case types.INCREMENT_COUNT:
-    case types.DECREMENT_COUNT:
-      return state.map(t => topic(t, action));
     default:
       return state;
   }

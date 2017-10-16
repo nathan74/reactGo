@@ -8,15 +8,6 @@ export default () => {
       method: 'GET',
       url: '/topic'
     }),
-    deleteTopic: ({ id }) => client.request({
-      method: 'DELETE',
-      url: `/topic/${id}`
-    }),
-    updateTopic: ({ id, data }) => client.request({
-      method: 'PUT',
-      url: `/topic/${id}`,
-      data
-    }),
     createTopic: ({ id, data }) => client.request({
       method: 'POST',
       url: `/topic/${id}`,
@@ -24,4 +15,3 @@ export default () => {
     })
   };
 };
-

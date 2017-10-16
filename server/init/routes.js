@@ -10,6 +10,7 @@ const topicsController = controllers && controllers.topics;
 
 export default (app) => {
   // user routes
+  /*
   if (usersController) {
     app.post('/sessions', usersController.login);
     app.post('/users', usersController.signUp);
@@ -42,6 +43,7 @@ export default (app) => {
       })
     );
   }
+  */
 
   // topic routes
   if (topicsController) {
